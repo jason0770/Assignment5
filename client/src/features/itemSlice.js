@@ -1,12 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
+const SERVER_URI = "https://inventoryassignment.onrender.com"
 const initialState = {
   items: [],
   currentItemID: 3,
 };
 
 export const getItemsAsync = createAsyncThunk("item/getItems", async () => {
-  return await fetch("http://localhost:3001/items")
+  return await fetch(SERVER_URI + "/items")
     .then((resp) => {
       return resp.json();
     })
@@ -14,7 +14,7 @@ export const getItemsAsync = createAsyncThunk("item/getItems", async () => {
 });
 
 export const addItemsAsync = createAsyncThunk("item/addItems", async (item) => {
-  return await fetch("http://localhost:3001/items", {
+  return await fetch(SERVER_URI + "/items", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export const deleteItemAsync = createAsyncThunk(
   "items/deleteItems",
   async (itemId) => {
     //Sources: https://rapidapi.com/guides/query-parameters-fetch
-    return await fetch(`http://localhost:3001/items/${itemId}`, {
+    return await fetch(`${SERVER_URI}/items/${itemId}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export const deleteItemAsync = createAsyncThunk(
 export const deleteAllItemAsync = createAsyncThunk(
   "items/deleteAllItems",
   async () => {
-    return await fetch("http://localhost:3001/items/", {
+    return await fetch(SERVER_URI + "/items/", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -72,7 +72,7 @@ export const updateItemsDetailsAsync = createAsyncThunk(
     const itemId = itemElements[0];
     const itemDescription = itemElements[1];
     const itemPrice = itemElements[2];
-    return await fetch(`http://localhost:3001/items/${itemId}`, {
+    return await fetch(`${SERVER_URI}/items/${itemId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

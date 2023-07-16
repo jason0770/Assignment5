@@ -1,0 +1,11 @@
+.home-page-main {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+ 
+    .home-page-main {
+        display: block;
+    }
+}

@@ -1,0 +1,48 @@
+.page-header {
+
+}
+
+.page-header__title {
+    background-color: black;
+    color: white;
+    font-size: xxx-large;
+    text-align: center;
+}
+
+.page-nav {
+    background-color: black;
+    border-bottom: solid black;
+}
+
+.page-nav__ol {
+    display: flex;
+    justify-content: center;
+}
+
+.page-nav__li {
+    margin-right: 20px;
+}
+
+.page-nav__a {
+    font-size: xx-large;
+    text-decoration: none;
+    color: white;
+}
+
+.page-nav__a_current, .page-nav__a:hover {
+    background-color: white;
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .page-header__title {
+        font-size: xx-large;
+    }
+
+    .page-nav__a {
+        font-size: x-large;
+    }
+
+}

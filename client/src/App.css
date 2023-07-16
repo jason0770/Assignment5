@@ -1,0 +1,5 @@
+@media screen and (max-width: 482px) {
+  .page {
+      min-width: 360px;
+  }
+}

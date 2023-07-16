@@ -1,0 +1,165 @@
+
+/*Source: https://cssanimation.rocks/list-items/*/
+.item-card_fade .item-card{
+    transition: all 0.4s ease-out;
+    opacity: 0;
+}
+
+.item-card_fade .item-card.item-card_show{
+    opacity: 1;
+}
+
+
+/*item-card*/
+.item-card-list {
+    width: 50%;
+}
+
+.item-card-list__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75.3vh;
+    overflow-y: auto;
+}
+
+.item-card__button-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card__button {
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    background-color: #292929;
+    border-color: #53565a;
+    margin-top: 0.5em;
+}
+
+.item-card-list__delete-all-button {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: x-large;
+    color: white;
+    background-color: #2A2B2D;
+}
+
+.item-card-list__title {
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+    background-color: #2A2B2D;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.item-card {
+    width: 100%;
+    display: flex;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.item-card_lightblue {
+    background-color: rgba(129, 190, 206, 0.51);
+}
+
+.item-card_darkblue {
+    background-color: rgba(55, 139, 164, 0.51);
+}
+
+.item-card__main {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    justify-content: space-between;
+}
+
+.item-card__content {
+    display: grid;
+
+}
+
+.item-card__title {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.item-card__description {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.item-card__price {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.item-card-image {
+    width: 200px;
+}
+
+.item-card-image__title {
+    font-size: large;
+    font-weight: lighter;
+}
+
+.item-card-image__figure {
+
+}
+
+.item-card-image__content {
+    width: 200px;
+}
+
+.item-card-image__captions {
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Source: https://www.toptal.com/responsive-web/introduction-to-responsive-web-design-pseudo-elements-media-queries*/
+@media screen and (max-width: 1024px) {
+    .item-card-image {
+        text-align: center;
+        width: auto;
+    }
+
+    .item-card {
+        display: block;
+    }
+
+    .item-card__main {
+        width: auto;
+     }
+}
+
+
+@media screen and (max-width: 768px) {
+    .item-card-list {
+        width: auto;
+    }
+
+    .item-card-list__content {
+        overflow-y: auto;
+        height: 36.7vh;
+    }
+
+
+}
+
+
+@media screen and (max-width: 482px) {
+    .item-card-list__content {
+        height: 32.5vh;
+    }
+}

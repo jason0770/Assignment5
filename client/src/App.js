@@ -16,6 +16,7 @@ function App() {
     <div className="page">
       <Header />
       <Routes>
+        <div>Line 19</div>
         <Route path="/" element={<Inventory />}></Route>
         <Route path="/about" element={<About />}></Route>
       </Routes>

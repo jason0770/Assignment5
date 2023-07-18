@@ -28,11 +28,11 @@ jobs:
       - name: Build server
         run: |
           cd server
-          npm ci
+          npm i
           npm start
       # Client Build
       - name: Build client
         run: |
           cd client
-          npm ci
+          npm i
           npm start

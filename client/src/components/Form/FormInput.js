@@ -9,7 +9,7 @@ export default function FormInput(props) {
           <input
             className="purchase-form__input"
             type={props.inputType}
-            id={props.id}
+            id={props.inputId}
             name={props.inputName}
             step={props.step}
             value={props.value}

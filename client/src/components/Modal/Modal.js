@@ -1,12 +1,11 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "./Modal.css";
 import Button from "../Button";
 import { useSelector } from "react-redux";
-import { createPortal, render } from "react-dom";
+import { createPortal } from "react-dom";
 import FormInput from "../Form/FormInput";
 import { useDispatch } from "react-redux";
 import {
-  updateItemDescription,
   updateItemsDetailsAsync,
 } from "../../features/itemSlice";
 

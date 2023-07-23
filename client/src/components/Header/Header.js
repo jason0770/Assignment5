@@ -1,8 +1,15 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import React from "react";
 import "./Header.css";
 
 export default function Header() {
+
+  // const location = useLocation()
+
+  // const isLinkActive = (path) => {
+  //   return location.pathname === path;
+  // }
+
   return (
     <header className="page-header">
       <h3 className="page-header__title">
@@ -21,7 +28,7 @@ export default function Header() {
           >
             Home
           </NavLink>
-          <NavLink
+          <NavLink 
             className={({ isActive }) =>
               isActive
                 ? "page-nav__li page-nav__a page-nav__a_current"

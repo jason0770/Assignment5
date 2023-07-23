@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { deleteItem, deleteItemAsync } from "../../features/itemSlice";
+import { deleteItemAsync } from "../../features/itemSlice";
 import Modal from "../Modal/Modal";
 import Button from "../Button";
 

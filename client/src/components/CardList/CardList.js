@@ -5,20 +5,18 @@ import ItemCard from "./ItemCard";
 import { useSelector, useDispatch } from "react-redux";
 import {
   deleteAllItemAsync,
-  deleteAllItems,
   getItemsAsync,
 } from "../../features/itemSlice";
 import Button from "../Button";
 import { useEffect } from "react";
-import { useState } from "react";
 
 export default function CardList() {
   const items = useSelector((storeState) => storeState.cardList.items.itemList);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getItemsAsync());
-  }, []);
+    dispatch(getItemsAsync());  // eslint-disable-line react-hooks/exhaustive-deps
+  });
 
   return (
     <div className="item-card-list">

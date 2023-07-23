@@ -4,7 +4,7 @@ import FormInput from "./FormInput";
 import FormRadio from "./FormRadio";
 import Button from "../Button";
 import { useDispatch } from "react-redux";
-import { addItem, addItemsAsync } from "../../features/itemSlice";
+import { addItemsAsync } from "../../features/itemSlice";
 import FormFileInput from "./FormFileInput";
 
 // Question1: Should I put the file reader in Redux Thunk?

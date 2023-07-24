@@ -4,6 +4,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header/Header.js";
 import About from "./components/about/About";
 import WrongPage from "./components/WrongPage";
+import Modal from "./components/Modal/Modal";
 
 // Sources: https://github.com/ginny100/Meta-Front-End-Developer/tree/master/Course%205%20-%20React%20Basics
 // Sources: https://www.youtube.com/watch?v=pfYkDwRJFNQ&list=PLqX4M0x0p9cnPwKtIT3ghqYYiqD8uludA&index=4&pp=iAQB
@@ -13,14 +14,14 @@ import WrongPage from "./components/WrongPage";
 function App() {
   return (
     <>
-    <div className="page">
-      <Header />
-      <Routes>
-        <Route path="/" element={<Inventory />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="*" element={<WrongPage />}></Route>
-      </Routes>
-    </div>
+      <div className="page">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Inventory />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="*" element={<WrongPage />}></Route>
+        </Routes>
+      </div>
     </>
   );
 }

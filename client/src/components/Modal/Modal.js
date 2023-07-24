@@ -31,7 +31,9 @@ export default function Modal(props) {
           <div className="modal__page modal__page_theme">
             <div className="modal__main modal__main_theme">
               <div className="modal__title">
+                {(items === null || items === undefined)}? "": 
                 ID.{items[itemId].itemId} {items[itemId].itemName}
+                
               </div>
 
               <textarea

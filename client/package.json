@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/user-event": "^14.4.3",
     "babel-jest": "^29.6.1",
+    "cypress": "^12.17.2",
     "jest-styled-components": "^7.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -23,6 +24,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "e2e-test": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -3,7 +3,6 @@ import React from "react";
 import "./Header.css";
 
 export default function Header() {
-
   // const location = useLocation()
 
   // const isLinkActive = (path) => {
@@ -28,7 +27,7 @@ export default function Header() {
           >
             Home
           </NavLink>
-          <NavLink 
+          <NavLink
             className={({ isActive }) =>
               isActive
                 ? "page-nav__li page-nav__a page-nav__a_current"

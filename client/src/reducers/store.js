@@ -1,4 +1,4 @@
-import { applyMiddleware, compose, configureStore, createStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import itemReducer from "../features/itemSlice";
 
 

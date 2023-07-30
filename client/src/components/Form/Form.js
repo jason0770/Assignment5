@@ -4,7 +4,7 @@ import FormInput from "./FormInput";
 import FormRadio from "./FormRadio";
 import Button from "../Button";
 import { useDispatch } from "react-redux";
-import { addItem, addItemsAsync } from "../../features/itemSlice";
+import { addItemsAsync } from "../../features/itemSlice";
 import FormFileInput from "./FormFileInput";
 
 // Question1: Should I put the file reader in Redux Thunk?
@@ -24,7 +24,8 @@ const readURL = (file) => {
   });
 };
 
-export default function Form() {
+export default function Form({ testClick }) {
+  // the prop is for the react-testing library and it should not affect the original the form rendering.
   const dispatch = useDispatch();
 
   const [radioOption, setRadioOption] = useState(RADIO_OPTIONS.URL);
@@ -230,12 +231,21 @@ export default function Form() {
           >
             Clear
           </Button>
-          <Button
-            className="purchase-form__button purchase-form__button_green"
-            btnType={"submit"}
-          >
-            Add
-          </Button>
+          {testClick === undefined || testClick === null ? (
+            <Button
+              className="purchase-form__button purchase-form__button_green"
+              btnType={"submit"}
+            >
+              Add
+            </Button>
+          ) : (
+            <Button
+              className="purchase-form__button purchase-form__button_green"
+              onClick={testClick}
+            >
+              Add
+            </Button>
+          )}
         </fieldset>
       </form>
     </div>

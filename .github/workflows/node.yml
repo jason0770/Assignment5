@@ -29,49 +29,10 @@ jobs:
         run: |
           cd server
           npm ci
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           npm test
-=======
-=======
->>>>>>> parent of 4015f96 (Modified node.yml)
-=======
->>>>>>> parent of 4015f96 (Modified node.yml)
-=======
->>>>>>> parent of 4015f96 (Modified node.yml)
-          npm start
->>>>>>> parent of 4015f96 (Modified node.yml)
-=======
-          npm run build --if-present
-          npm test
->>>>>>> parent of 64653a3 (Modified node.yml)
       # Client Build
       - name: Build client
         run: |
           cd client
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           npm install
           npm test
-=======
-=======
->>>>>>> parent of 4015f96 (Modified node.yml)
-          npm ci
-<<<<<<< HEAD
-=======
-          npm ci
->>>>>>> parent of 4015f96 (Modified node.yml)
-=======
-          npm ci
->>>>>>> parent of 4015f96 (Modified node.yml)
-          npm start
->>>>>>> parent of 4015f96 (Modified node.yml)
-=======
-          npm run build --if-present
-          npm test
->>>>>>> parent of 64653a3 (Modified node.yml)

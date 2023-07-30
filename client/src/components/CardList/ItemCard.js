@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { deleteItem, deleteItemAsync } from "../../features/itemSlice";
+import { deleteItemAsync } from "../../features/itemSlice";
 import Modal from "../Modal/Modal";
 import Button from "../Button";
 
@@ -33,18 +33,38 @@ export default function ItemCard(props) {
             <Button className={"item-card__button"}>Reviews</Button>
           </div> */}
           <div className="item-card__button-section">
-            <Button
-              onClick={() => setIsViewClicked(true)}
-              className={"item-card__button"}
-            >
-              View
-            </Button>
-            <Button
-              onClick={() => dispatch(deleteItemAsync(props.itemId))}
-              className="item-card__button"
-            >
-              Delete
-            </Button>
+            {props.testViewClick === undefined ||
+            props.testViewClick === null ? (
+              <Button
+                onClick={() => setIsViewClicked(true)}
+                className={"item-card__button"}
+              >
+                View
+              </Button>
+            ) : (
+              <Button
+                onClick={props.testViewClick}
+                className={"item-card__button"}
+              >
+                View
+              </Button>
+            )}
+            {props.testDeleteClick === undefined ||
+            props.testDeleteClick === null ? (
+              <Button
+                onClick={() => dispatch(deleteItemAsync(props.itemId))}
+                className="item-card__button"
+              >
+                Delete
+              </Button>
+            ) : (
+              <Button
+                onClick={props.testDeleteClick}
+                className="item-card__button"
+              >
+                Delete
+              </Button>
+            )}
           </div>
         </div>
         <aside className="item-card-image">

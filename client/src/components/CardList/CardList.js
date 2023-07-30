@@ -3,22 +3,21 @@ import "./CardList.css";
 import React from "react";
 import ItemCard from "./ItemCard";
 import { useSelector, useDispatch } from "react-redux";
-import {
-  deleteAllItemAsync,
-  deleteAllItems,
-  getItemsAsync,
-} from "../../features/itemSlice";
+import { deleteAllItemAsync, getItemsAsync } from "../../features/itemSlice";
 import Button from "../Button";
 import { useEffect } from "react";
-import { useState } from "react";
 
-export default function CardList() {
+export default function CardList({
+  testViewClick,
+  testDeleteClick,
+  testDeleteAllClick,
+}) {
   const items = useSelector((storeState) => storeState.cardList.items.itemList);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getItemsAsync());
-  }, []);
+    dispatch(getItemsAsync()); // eslint-disable-line react-hooks/exhaustive-deps
+  });
 
   return (
     <div className="item-card-list">
@@ -49,6 +48,8 @@ export default function CardList() {
                         itemDescription={originalItem["itemDescription"]}
                         itemURL={originalItem["itemImageLink"]}
                         itemPrice={originalItem["itemPrice"]}
+                        testViewClick={testViewClick}
+                        testDeleteClick={testDeleteClick}
                       />
                     ) : (
                       <ItemCard
@@ -62,6 +63,8 @@ export default function CardList() {
                         itemDescription={originalItem["itemDescription"]}
                         itemURL={originalItem["itemImageLink"]}
                         itemPrice={originalItem["itemPrice"]}
+                        testViewClick={testViewClick}
+                        testDeleteClick={testDeleteClick}
                       />
                     );
                   }
@@ -71,12 +74,21 @@ export default function CardList() {
           </>
         )}
       </div>
-      <Button
-        onClick={() => dispatch(deleteAllItemAsync())}
-        className="item-card-list__delete-all-button"
-      >
-        Delete All
-      </Button>
+      {testDeleteAllClick === undefined || testDeleteAllClick === null ? (
+        <Button
+          onClick={() => dispatch(deleteAllItemAsync())}
+          className="item-card-list__delete-all-button"
+        >
+          Delete All
+        </Button>
+      ) : (
+        <Button
+          onClick={testDeleteAllClick}
+          className="item-card-list__delete-all-button"
+        >
+          Delete All
+        </Button>
+      )}
     </div>
   );
 }

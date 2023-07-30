@@ -29,10 +29,19 @@ jobs:
         run: |
           cd server
           npm ci
+<<<<<<< HEAD
           npm test
+=======
+          npm start
+>>>>>>> parent of 4015f96 (Modified node.yml)
       # Client Build
       - name: Build client
         run: |
           cd client
+<<<<<<< HEAD
           npm install
           npm test
+=======
+          npm ci
+          npm start
+>>>>>>> parent of 4015f96 (Modified node.yml)

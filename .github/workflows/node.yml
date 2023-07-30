@@ -32,8 +32,11 @@ jobs:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           npm test
 =======
+=======
+>>>>>>> parent of 4015f96 (Modified node.yml)
 =======
 >>>>>>> parent of 4015f96 (Modified node.yml)
           npm start
@@ -48,6 +51,7 @@ jobs:
           cd client
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           npm install
           npm test
 =======
@@ -55,6 +59,9 @@ jobs:
 >>>>>>> parent of 4015f96 (Modified node.yml)
           npm ci
 <<<<<<< HEAD
+=======
+          npm ci
+>>>>>>> parent of 4015f96 (Modified node.yml)
           npm start
 >>>>>>> parent of 4015f96 (Modified node.yml)
 =======
